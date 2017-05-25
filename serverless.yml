@@ -1,0 +1,33 @@
+service: kapbot
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  environment:
+    TWITCH_CLIENT_ID: XXXXX
+
+functions:
+  live:
+    handler: kapbot.live
+    events:
+      - http:
+          path: /live
+          method: get
+  game:
+    handler: kapbot.game
+    events:
+      - http:
+          path: /game
+          method: get
+  random:
+    handler: kapbot.random
+    events:
+      - http:
+          path: /random
+          method: get
+  popular:
+    handler: kapbot.popular
+    events:
+      - http:
+          path: /popular
+          method: get
