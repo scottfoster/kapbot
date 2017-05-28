@@ -1,6 +1,8 @@
 ## KapBot
----
 KapBot is a Twitch Chatbot powered by AWS Lex and Lambda.
+
+## Example
+![slack example](https://github.com/scottfoster/kapbot/raw/master/img/example.png)
 
 ## Installation
 ```

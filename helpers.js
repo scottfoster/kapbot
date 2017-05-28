@@ -12,28 +12,27 @@ function strings( short, data )
       break;
 
     case 'UNABLE_TO_LOCATION_USER':
-      return 'Sorry, I could not find a Twitch user that goes by ' + '"' + data.currentIntent.slots.user + '."';
+      return 'Sorry, I could not find a Twitch user that goes by ' + '*' + data.currentIntent.slots.user + '.*';
       break;
 
     case 'NO_VIDEOS_FOR_USER':
-      return 'Sorry, couldn\'t find any videos for "' + data.currentIntent.slots.user + '."';
+      return 'Sorry, couldn\'t find any videos for ' + data.currentIntent.slots.user + '.';
       break;
 
     case 'NOT_STREAMING_LINK':
-      return "Sorry, " + data.channel.display_name + ' is currently not streaming. You can watch their last stream "' + data.title + '" at ' + data.url + ".";
+      return 'Sorry, *' + data.channel.display_name + '* is currently not streaming. You can watch their last stream "' + data.title + '" at ' + data.url + ".";
       break;
 
     case 'VALID_STREAM':
-      return data.channel.display_name + " is *live* and has been streaming for " + moment( data.created_at ).fromNow(true) + ". They are currently playing \"" + data.channel.game + "\" with " + formatNum( data.viewers ) + " viewers. Start watching them at " + data.channel.url + ".";
+      return '*' + data.channel.display_name + '* is :tada: live :tada: and has been streaming for ' + moment( data.created_at ).fromNow( true ) + '. They are currently playing *"' + data.channel.game + '"* with ' + formatNum( data.viewers ) + ' viewers. Start watching them at ' + data.channel.url + '.';
       break;
 
     case 'RANDOM_STREAM':
-      console.log( data );
-      return data.channel.display_name + " is live and has been streaming for " + moment( data.created_at ).fromNow(true);
+      return '*' + data.channel.display_name + '* is live and has been streaming for ' + moment( data.created_at ).fromNow(true);
       break;
 
     case 'GAME_STREAMER':
-      return data.channel.name + ' is playing "' + data.channel.game + '" for ' + data.viewers + " people - " + data.channel.url;
+      return '*' + data.channel.display_name + '* is playing *"' + data.channel.game + '"* for ' + formatNum( data.viewers ) + " people - " + data.channel.url;
       break;
 
     default:

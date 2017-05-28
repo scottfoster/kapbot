@@ -16,7 +16,7 @@ module.exports = function(app, event, callback) {
       } else {
         var body = '';
         for (var i = 0; i < res.streams.length; i++) {
-          body += helpers.strings("GAME_STREAMER", res.streams[i]) + "\n\n";
+          body += (i+1) + '. ' + helpers.strings("GAME_STREAMER", res.streams[i]) + '\n';
         }
         return event(null, callback(body));
       }
