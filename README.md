@@ -1,21 +1,25 @@
-## KapBot
+# KapBot #
 KapBot is a Twitch Chatbot powered by AWS Lex and Lambda.
 
-## Example
+# Screenshots #
+
+#### Chatbot within Slack ####
 ![slack example](https://github.com/scottfoster/kapbot/raw/master/img/example.png)
 
+#### Lex Configuration ####
 ![lex configuration](https://github.com/scottfoster/kapbot/raw/master/img/lex.png)
 
-## Installation
+# Installation #
 ```
 1. git clone git@github.com:scottfoster/kapbot.git .
 2. Create a Twitch Client ID at https://www.twitch.tv/kraken/oauth2/clients/new
 3. Replace XXXXX in serverless.yml with your Twitch Client ID
 4. npm install
 5. serverless deploy
-6. Create Bot, Intents and utterances in AWS Lex
+6. Create bot, intents and utterances in Lex
 ```
-## License
+
+# License #
 
 Copyright 2017 Scott Foster
 
